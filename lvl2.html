@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Лаба</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="coins">
+      <p>coin - <span class="coin-counter">0</span></p>
+
+      <a href="index.html" class="coins__link">Меню</a>
+
+      <button class="coins__help" type="button">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="m12 4.938c-3.436 0-6.229 2.795-6.229 6.229 0 1.311.406 2.564 1.182 3.641.061.082 1.369 1.863 1.604 3.461-.652.146-1.141.727-1.141 1.42 0 .805.654 1.457 1.459 1.457h.818v.877c0 .551.447 1 1 1h2.613c.553 0 1-.449 1-1v-.877h.818c.805 0 1.459-.652 1.459-1.457 0-.693-.488-1.273-1.139-1.42.232-1.6 1.543-3.381 1.604-3.463l.188-.248-.008-.014c.656-1.01 1-2.172 1-3.377.001-3.435-2.792-6.229-6.228-6.229zm1.307 17.083h-2.613v-.877h2.613zm2.277-2.333c0 .252-.207.457-.459.457h-6.25c-.252 0-.459-.205-.459-.457s.207-.459.459-.459h6.25c.252 0 .459.207.459.459zm.67-5.487c-.07.092-1.584 2.102-1.824 4.027h-4.858c-.234-1.852-1.645-3.787-1.816-4.016-.645-.895-.984-1.949-.984-3.047 0-2.883 2.346-5.229 5.229-5.229s5.229 2.346 5.229 5.229c-.001 1.097-.341 2.151-.976 3.036z"/>
+            <path d="m11.5.979h1v2.875h-1z"/>
+            <path d="m4.376 4.48h2.875v1h-2.875z" transform="matrix(.707 .707 -.707 .707 5.224 -2.652)"/>
+            <path d="m1.814 10.666h2.875v1h-2.875z"/>
+            <path d="m17.687 3.542h1v2.875h-1z" transform="matrix(.707 .707 -.707 .707 8.848 -11.401)"/>
+            <path d="m19.311 10.666h2.875v1h-2.875z"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <p class="description">
+
+    </p>
+
+    <div class="top">
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+      <input class="input-text" type="text" disabled>
+    </div>
+    <div class="bottom">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+      <input class="input-btn" type="button" value="">
+    </div>
+
+    <div class="btns">
+      <input class="input-check" type="button" value="Проверить" onclick="checkTrue();">
+
+      <input class="input-reset" type="button" value="Сбросить" onclick="resetScene();">
+    </div>
+
+
+    <script>
+      let arrWords =  [ ['п ', 'р', 'а', 'д', 'а'],
+                                ['а', 'т', 'т', 'а', 'ш', 'е'],
+                                ['c', 'о', 'л', 'н', 'ц', 'е'],
+                                ['ш', 'п', 'и', 'н', 'г', 'а', 'л', 'е', 'т'],
+                                ['и', 'с', 'т', 'и', 'н', 'а'],
+                                ['г', 'р', 'и', 'ф'],
+                                ['о', 'р', 'а', 'н', 'ж', 'е', 'в', 'а', 'я'],
+                                ['п', 'а', 'л', 'и', 'н', 'д', 'р', 'о', 'м'],
+                                ['ч', 'у', 'д', 'с', 'к', 'о', 'е'],
+                                ['ж', 'у', 'ч', 'о', 'к'],
+                                ['с', 'н', 'о', 'п']
+                              ];
+      
+      let arrDescription =  ['Что носит дьявол в известном фильме?',
+                                        'Назовите должность человека, работающего в посольстве – пресс',
+                                        'Назовите объект, вокруг которого всё вращается в гелиоцентрической системе',
+                                        'С его помощью мы можем закрыть створки окна. С помощью чего?',
+                                        'Согласно известной пословице, в споре рождается',
+                                        'Стержень спортивной штанги именуют',
+                                        'Какая особенная река течёт в ЮАР?',
+                                        'Каким словом является «топот»?',
+                                        'Назовите озеро, где было Ледовое побоище',
+                                        'Как называют простым языком устройство для прослушки?',
+                                        'Хлебные колосья связываются в'
+                                      ];
+    </script>
+    <script src="js/main.js"></script>
+  </body>  
